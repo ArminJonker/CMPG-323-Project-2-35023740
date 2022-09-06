@@ -12,7 +12,6 @@ using System.Text;
 using Microsoft.OpenApi;
 using Microsoft.OpenApi.Models;
 
-
 namespace JWTAuthentication
 {
     public class Startup
@@ -29,7 +28,9 @@ namespace JWTAuthentication
         {
             services.AddControllers();
 
-            services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer("name=ConnectionStrings:ConnStr"));
+            services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer("name=ConnectionStrings:DefaultConnection"));
+            /*services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer("name=ConnectionStrings:ConnStr"));
+
 
             services.AddSwaggerGen(c => {
                 c.SwaggerDoc("v2", new OpenApiInfo
@@ -57,7 +58,7 @@ namespace JWTAuthentication
             new string[] {}
         }
     });
-            });
+            });*/
 
 
             // For Entity Framework  
@@ -109,8 +110,8 @@ namespace JWTAuthentication
             {
                 endpoints.MapControllers();
             });
-            app.UseSwagger();
-            app.UseSwaggerUI(options => options.SwaggerEndpoint("/swagger/v2/swagger.json", "MyTestDemo"));
+           // app.UseSwagger();
+          //  app.UseSwaggerUI(options => options.SwaggerEndpoint("/swagger/v2/swagger.json", "MyTestDemo"));
         }
     }
 }
