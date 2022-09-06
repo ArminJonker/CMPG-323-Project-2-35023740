@@ -99,6 +99,21 @@ namespace Api.Controllers
             return CreatedAtAction("GetZone", new { id = zone.ZoneId }, zone);
         }
 
+        /*[HttpGet("{id}")]
+        public async Task<ActionResult<Zone>> GetZoneDevice(Guid id)
+        {
+            var zone = await _context.Zone.FindAsync(id);
+
+            if (zone == null)
+            {
+                return NotFound();
+            }
+
+            var devices = _context.Device.Where(d => d.ZoneId == id).ToArray();
+
+            return devices;
+        }*/
+
         // DELETE: api/Zones/5
         [HttpDelete("{id}")]
         public async Task<ActionResult<Zone>> DeleteZone(Guid id)
