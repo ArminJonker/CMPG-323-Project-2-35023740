@@ -1,5 +1,5 @@
 # CMPG 323 Project 2
-This repo is for my API that I created using Visual Studios and Azure. I also use swagger for the display of the API.
+This repo is for my API that I created using Visual Studios and Azure. I also implemented swagger sothat you can view the working endpoint.
 
 ## I divided the Project into 3 phases. 
 Phase 1 was the design of my database in azure.
