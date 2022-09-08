@@ -1,4 +1,4 @@
-#C MPG 323 Project 2
+# CMPG 323 Project 2
 This repo is for my API that I created using Visual Studios and Azure. I also use swagger for the display of the API.
 
 ## I divided the Project into 3 phases. 
